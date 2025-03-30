@@ -198,3 +198,25 @@ void delete_at_end()
         free(hold);
     }
 }
+void delete_nth_node()
+{
+    NodeType *hold,*temp;
+    int pos,i;
+    if(first==NULL)
+    {
+        printf("The list is empty");
+        return;
+    }
+    else{
+        temp = first;
+        printf("Enter the position of node at which you want to delete a node:");
+        scanf("%d",&pos);
+        for(i=1;i<pos-1;i++)
+        {
+            temp=temp->next;
+        }
+        hold=temp->next;
+        temp->next=hold->next;
+        free(hold);
+    }
+}
