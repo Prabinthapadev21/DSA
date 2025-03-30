@@ -245,3 +245,21 @@ void count_nodes()
     }
     printf("The number of nodes in the list is:%d",count);
 }
+void display()
+{
+    NodeType *temp;
+    temp = first;
+    if(temp==NULL)
+    {
+        printf("The list is empty");
+        exit(0);
+    }
+    else
+    {
+        while(temp!=NULL)
+        {
+            printf("%d\t",temp->info);
+            temp=temp->next;
+        }
+    }
+}
