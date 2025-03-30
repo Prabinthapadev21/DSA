@@ -116,3 +116,20 @@ void insert_given_position(int item)
         temp->next=NewNode;
     }
 }
+void insert_at_end(int item)
+{
+    NodeType *NewNode;
+    NewNode=(NodeType*)malloc(sizeof(NodeType));
+    NewNode->info=item;
+    NewNode->next=NULL;
+    if(first==NULL)
+    {
+        first=NewNode;
+        last=NewNode;
+    }
+    else
+    {
+        last->next=NewNode;
+        last=NewNode;
+    }
+}
