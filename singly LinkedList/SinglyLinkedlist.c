@@ -171,3 +171,30 @@ void delete_given_position()
         free(temp1);
     }
 }
+void delete_at_end()
+{
+    NodeType *hold,*temp;
+    if(first==NULL)
+    {
+        printf("The list is empty");
+        return;
+    }
+    else if(first->next==NULL)
+    {
+        hold=first;
+        first=NULL;
+        last=NULL;
+        free(hold);
+    }
+    else
+    {
+        temp=first;
+        while(temp->next!=last)
+        {
+            temp=temp->next;
+        }
+        hold=temp->next;
+        temp->next=NULL;
+        free(hold);
+    }
+}
