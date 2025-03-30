@@ -233,3 +233,15 @@ void info_sum()
     }
     printf("The sum of the elements in the list is:%d",sum);
 }
+void count_nodes()
+{
+    int count=0;
+    NodeType *temp;
+    temp = first;
+    while(temp!=NULL)
+    {
+        count++;
+        temp=temp->next;
+    }
+    printf("The number of nodes in the list is:%d",count);
+}
