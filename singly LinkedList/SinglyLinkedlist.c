@@ -148,3 +148,26 @@ void delete_at_beginning()
         free(temp);
     }
 }
+void delete_given_position()
+{
+    NodeType *temp,*temp1;
+    int pos,i;
+    printf("Enter the position of node at which you want to delete a node:");
+    scanf("%d",&pos);
+    if(first==NULL)
+    {
+        printf("The list is empty");
+        return;
+    }
+    else
+    {
+        temp=first;
+        for(i=1;i<pos-1;i++)
+        {
+            temp=temp->next;
+        }
+        temp1=temp->next;
+        temp->next=temp1->next;
+        free(temp1);
+    }
+}
