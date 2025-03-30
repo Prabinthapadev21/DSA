@@ -133,3 +133,18 @@ void insert_at_end(int item)
         last=NewNode;
     }
 }
+void delete_at_beginning()
+{
+    NodeType *temp;
+    if(first==NULL)
+    {
+        printf("The list is empty");
+        return;
+    }
+    else
+    {
+        temp=first;
+        first=first->next;
+        free(temp);
+    }
+}
