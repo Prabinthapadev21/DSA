@@ -93,3 +93,26 @@ void insert_at_beginning(int item)
         first=NewNode;
     }
 }
+void insert_given_position(int item)
+{
+    int pos,i;
+    NodeType *NewNode,*temp;
+    NewNode->info=item;
+    printf("Enter the position of node at which you want to insert a new node:");
+    scanf("%d",&pos);
+    if(first==NULL)
+    {
+       first=NewNode;
+       last=NewNode;
+    }
+    else
+    {
+        temp=first;
+        for(i=1;i<pos-1;i++)
+        {
+            temp=temp->next;
+        }
+        NewNode->next=temp->next;
+        temp->next=NewNode;
+    }
+}
