@@ -4,7 +4,7 @@
 #define SIZE 4  // Maximum allowed stack size
 
 void push(int stack[], int *top, int max);
-void pop(int stack[], int *top);
+void pop(int stack[], int *top); 
 void display(int stack[], int top);
 
 int main() {
