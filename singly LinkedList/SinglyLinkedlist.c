@@ -220,3 +220,16 @@ void delete_nth_node()
         free(hold);
     }
 }
+
+void info_sum()
+{
+    NodeType *temp;
+    temp = first;
+    int sum=0;
+    while(temp!=NULL)
+    {
+        sum=sum+temp->info;
+        temp=temp->next;
+    }
+    printf("The sum of the elements in the list is:%d",sum);
+}
