@@ -49,7 +49,7 @@ int main() {
 
 int precedency(char ch) {
     switch (ch) {
-        case '^': return 4;  // Exponentiation
+        case '$': return 4;  // Exponentiation
         case '*':
         case '/': return 3;  // Multiplication and division
         case '+':
